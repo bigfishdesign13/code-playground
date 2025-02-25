@@ -1,1 +1,13 @@
 @layer reset, base, tokens, recipes, utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #242424;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141414;
+    --foreground: #e9e9e9;
+  }
+} */
