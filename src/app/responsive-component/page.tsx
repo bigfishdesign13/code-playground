@@ -23,10 +23,14 @@ export default function Home() {
         >
           <header className={css({ mb: "2rem" })}>
             <Heading size="heading4">Responsive component</Heading>
-            {/* <Heading level="h3" size="subheading1">
+            <Heading
+              level="h3"
+              size="subheading1"
+              className={css({ maxWidth: "720px" })}
+            >
               How would a component using container queries resize and adjust
               over a range of viewports?
-            </Heading> */}
+            </Heading>
           </header>
 
           <div className={styles.gridWithSizebarStyles}>

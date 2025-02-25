@@ -8,7 +8,8 @@ const globalAreaStyles = {
 const styles = {
   gridWithSizebarStyles: css({
     display: "grid",
-    gap: { base: "1rem", md: "1.5rem", xl: "2rem" },
+    // gap: { base: "1rem", md: "1.5rem", xl: "2rem" },
+    gap: "2rem",
     gridTemplateAreas: {
       base: `"top" "sidebar" "main" "bottom"`,
       sm: `"top top" "sidebar main" "bottom bottom"`,

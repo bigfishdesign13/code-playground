@@ -139,7 +139,7 @@ export default defineConfig({
             loud: { value: primatives.colors["gray-cool"][200] },
             quiet: { value: primatives.colors["gray-cool"][500] },
           },
-          button: {
+          formElement: {
             DEFAULT: { value: primatives.colors["rich-gold"][500] },
             loud: { value: primatives.colors["rich-gold"][400] },
             quiet: { value: primatives.colors["rich-gold"][600] },

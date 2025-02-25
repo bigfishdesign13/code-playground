@@ -6,7 +6,7 @@ const defaultHeight: string = "44px";
 export const styles = {
   button: css({
     alignItems: "center",
-    bg: "button",
+    bg: "formElement",
     border: 0,
     display: "flex",
     fontSize: "16px",
@@ -15,20 +15,21 @@ export const styles = {
     lineHeight: "1.0",
     px: ".5rem",
     py: ".5rem",
+    transition: "background-color 250ms",
     w: defaultHeight,
     "& span": {
       display: "none",
-      "@container searchBarContainer (min-width: calc(768px - 4rem))": {
+      "@container searchBarContainer (min-width: calc(768px - 6rem))": {
         display: "block",
       },
     },
     _hover: {
-      bg: "button.quiet",
+      bg: "formElement.quiet",
     },
     _focus: {
-      bg: "button.quiet",
+      bg: "formElement.quiet",
     },
-    "@container searchBarContainer (min-width: calc(768px - 4rem))": {
+    "@container searchBarContainer (min-width: calc(768px - 6rem))": {
       px: "1rem",
       width: "unset",
     },
@@ -36,12 +37,22 @@ export const styles = {
   container: cq({ name: "searchBarContainer" }),
   input: css({
     border: "1px solid",
-    borderRight: "0",
+    // borderRight: "0",
     borderColor: "border",
     fontSize: "16px",
     flexGrow: "1",
     h: defaultHeight,
+    marginRight: "-1px",
     paddingStart: ".5rem",
+    transition: "border-color 250ms",
+    _hover: {
+      borderColor: "border.loud",
+      zIndex: 1,
+    },
+    _focus: {
+      borderColor: "border.loud",
+      zIndex: 1,
+    },
   }),
 
   search: css({
@@ -49,42 +60,44 @@ export const styles = {
     width: "full",
   }),
   select: css({
-    background: "none",
+    background: "formElement/10",
     border: "1px solid",
     borderColor: "border",
     borderRadius: "0",
-    // borderRight: { base: "1px solid", sm: "0" },
-    // borderRight: "1px solid",
     h: defaultHeight,
     paddingStart: ".5rem",
+    transition: "border-color 250ms",
 
     appearance: "none",
     backgroundImage:
-      'url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")',
+      "linear-gradient(45deg, transparent 50%, white 50%), linear-gradient(135deg, white 50%, transparent 50%), linear-gradient(to right, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));",
+    backgroundPosition:
+      "calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "right 0.7rem top 50%",
-    backgroundSize: "0.65rem auto",
+    backgroundSize: "5px 5px, 5px 5px, 1px 1.5em",
     // "-webkit-appearance": "none",
+    _hover: {
+      borderColor: "border.loud",
+      zIndex: 1,
+    },
+    _focus: {
+      borderColor: "border.loud",
+      zIndex: 1,
+    },
     "@container searchBarContainer (min-width: calc(480px - 4rem))": {
-      borderRight: "0",
+      // borderRight: "0",
+      marginRight: "-1px",
     },
   }),
   wrapper: css({
     display: "grid",
-    // gap: { base: ".5rem", sm: "0" },
-    // gridTemplateColumns: {
-    //   base: "1fr",
-    //   sm: "1fr 1fr",
-    //   md: "1fr 2fr",
-    //   lg: "1fr 3fr",
-    // },
     gap: ".5rem",
     gridTemplateColumns: "1fr",
     "@container searchBarContainer (min-width: calc(480px - 4rem))": {
       gap: "0",
       gridTemplateColumns: "1fr 1fr",
     },
-    "@container searchBarContainer (min-width: calc(768px - 4rem))": {
+    "@container searchBarContainer (min-width: calc(768px - 6rem))": {
       gridTemplateColumns: "1fr 2fr",
     },
     "@container searchBarContainer (min-width: calc(1024px - 4rem))": {
