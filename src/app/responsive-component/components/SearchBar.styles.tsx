@@ -64,7 +64,7 @@ export const styles = {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right 0.7rem top 50%",
     backgroundSize: "0.65rem auto",
-    "-webkit-appearance": "none",
+    // "-webkit-appearance": "none",
     "@container searchBarContainer (min-width: calc(480px - 4rem))": {
       borderRight: "0",
     },
