@@ -1,38 +1,50 @@
 import { css } from "../../styled-system/css";
 
+const globalStyles = {
+  fontWeight: "700",
+  letterSpacing: "-1px",
+  lineHeight: "1.3",
+};
+
 export const styles = {
   display1: css({
     fontSize: "10rem",
+    ...globalStyles,
   }),
   display2: css({
     fontSize: "9rem",
+    ...globalStyles,
   }),
   heading1: css({
     fontSize: "8rem",
-    lineHeight: "1.3",
+    ...globalStyles,
   }),
   heading2: css({
-    lineHeight: "1.3",
+    fontSize: "7rem",
+    ...globalStyles,
   }),
   heading3: css({
     fontSize: "6rem",
-    lineHeight: "1.3",
+    ...globalStyles,
   }),
   heading4: css({
     fontSize: "4rem",
-    lineHeight: "1.3",
+    ...globalStyles,
   }),
   heading5: css({
     fontSize: "2rem",
-    lineHeight: "1.3",
+    ...globalStyles,
   }),
   heading6: css({
     fontSize: "1rem",
+    ...globalStyles,
   }),
   subheading1: css({
+    fontWeight: "500",
     fontSize: "1.5rem",
   }),
   subheading2: css({
+    fontWeight: "500",
     fontSize: "1.375rem",
   }),
 };

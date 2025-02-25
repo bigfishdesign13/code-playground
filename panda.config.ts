@@ -83,6 +83,7 @@ const globalCss = defineGlobalStyles({
     backgroundImage: "url(/background.png)",
     backgroundRepeat: "no-repeat",
     color: "text",
+    fontFamily: "var(--font-barlow)",
     fontSize: "16px",
     lineHeight: "1.5",
   },
@@ -113,12 +114,20 @@ export default defineConfig({
   // Useful for theme customization
   theme: {
     extend: {
+      breakpoints: {
+        sm: '480px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px'
+      },
       tokens: {
         colors: {
           surface: {
             page: { value: primatives.colors["gray-cool"][950] },
             primary: { value: primatives.colors["gray-cool"][900] },
             secondary: { value: primatives.colors["gray-cool"][800] },
+            fade: { value: `${primatives.colors["gray-cool"][900]}/80` },
           },
           text: {
             DEFAULT: { value: primatives.colors["gray-warm"][200] },
@@ -129,6 +138,11 @@ export default defineConfig({
             DEFAULT: { value: primatives.colors["gray-cool"][400] },
             loud: { value: primatives.colors["gray-cool"][200] },
             quiet: { value: primatives.colors["gray-cool"][500] },
+          },
+          button: {
+            DEFAULT: { value: primatives.colors["rich-gold"][500] },
+            loud: { value: primatives.colors["rich-gold"][400] },
+            quiet: { value: primatives.colors["rich-gold"][600] },
           },
         },
       },

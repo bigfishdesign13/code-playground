@@ -25,9 +25,9 @@ export default function Home() {
           })}
         >
           <ListCard
-            slug="responsive-grid"
+            slug="responsive-component"
             summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            title="Responsive grid"
+            title="Responsive component"
           />
           <ListCard slug="marty" summary="Summary" title="Title" />
           <ListCard slug="marty" summary="Summary" title="Title" />
