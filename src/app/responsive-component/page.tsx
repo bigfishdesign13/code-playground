@@ -1,5 +1,4 @@
 import { css } from "../../../styled-system/css";
-// import Image from "next/image";
 import Heading from "@/components/Heading";
 import styles from "./page.styles";
 import SearchBar from "./components/SearchBar";
@@ -28,25 +27,25 @@ export default function Home() {
               size="subheading1"
               className={css({ maxWidth: "720px" })}
             >
-              How would a component using container queries resize and adjust
-              over a range of viewports?
+              Can a component using container queries stay in sync with the
+              underlying grid and columns?
             </Heading>
           </header>
 
-          <div className={styles.gridWithSizebarStyles}>
-            <div className={styles.topStyles}>
+          <div className={styles.gridWithSizebar}>
+            <div className={styles.top}>
               <Heading size="subheading1">Top</Heading>
               <SearchBar />
             </div>
-            <div className={styles.sidebarStyles}>
+            <div className={styles.sidebar}>
               <Heading size="subheading1">Sidebar</Heading>
               <SearchBar />
             </div>
-            <div className={styles.mainStyles}>
+            <div className={styles.main}>
               <Heading size="subheading1">Main content area</Heading>
               <SearchBar />
             </div>
-            <div className={styles.bottomStyles}>
+            <div className={styles.bottom}>
               <Heading size="subheading1">Bottom</Heading>
               <SearchBar />
             </div>

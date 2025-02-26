@@ -3,7 +3,7 @@ import { css } from "../../../styled-system/css";
 const globalAreaStyles = {};
 
 const styles = {
-  gridWithSizebarStyles: css({
+  gridWithSizebar: css({
     display: "grid",
     // gap: { base: "1rem", md: "1.5rem", xl: "2rem" },
     gap: "2rem",
@@ -18,21 +18,21 @@ const styles = {
       lg: "1fr 3fr",
     },
   }),
-  topStyles: css({
+  top: css({
     gridArea: "top",
     ...globalAreaStyles,
   }),
-  sidebarStyles: css({
+  sidebar: css({
     bg: "surface.primary/80",
     gridArea: "sidebar",
     p: "1rem",
     ...globalAreaStyles,
   }),
-  mainStyles: css({
+  main: css({
     gridArea: "main",
     ...globalAreaStyles,
   }),
-  bottomStyles: css({
+  bottom: css({
     gridArea: "bottom",
     ...globalAreaStyles,
   }),
