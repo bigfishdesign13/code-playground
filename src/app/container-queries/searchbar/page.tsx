@@ -1,7 +1,7 @@
-import { css } from "../../../styled-system/css";
+import { css } from "../../../../styled-system/css";
 import Heading from "@/components/Heading";
 import styles from "./page.styles";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "../components/SearchBar";
 
 export default function Home() {
   return (

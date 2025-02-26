@@ -25,9 +25,14 @@ export default function Home() {
           })}
         >
           <ListCard
-            slug="responsive-component"
+            slug="container-queries/searchbar"
             summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            title="Responsive component"
+            title="Container queries: SearchBar"
+          />
+          <ListCard
+            slug="container-queries/card"
+            summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+            title="Container queries: Card"
           />
           <ListCard slug="marty" summary="Summary" title="Title" />
           <ListCard slug="marty" summary="Summary" title="Title" />
