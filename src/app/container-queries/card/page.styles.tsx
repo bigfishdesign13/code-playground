@@ -25,6 +25,8 @@ const styles = {
   }),
   sidebar: css({
     bg: "surface.primary/80",
+    border: "1px solid",
+    borderColor: "border.subtle",
     display: "flex",
     flexDirection: "column",
     gap: "2rem",

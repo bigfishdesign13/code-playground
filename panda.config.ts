@@ -138,6 +138,7 @@ export default defineConfig({
             DEFAULT: { value: primatives.colors["gray-cool"][400] },
             loud: { value: primatives.colors["gray-cool"][200] },
             quiet: { value: primatives.colors["gray-cool"][500] },
+            subtle: { value: primatives.colors["gray-cool"][800] },
           },
           formElement: {
             DEFAULT: { value: primatives.colors["rich-gold"][500] },

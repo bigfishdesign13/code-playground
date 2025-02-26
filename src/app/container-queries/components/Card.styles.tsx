@@ -4,6 +4,8 @@ import { css } from "../../../../styled-system/css";
 export const styles = {
   container: cq({ name: "cardContainer" }),
   image: css({
+    border: "1px solid",
+    borderColor: "border.subtle",
     borderRadius: "8px",
     h: "200px",
     mb: ".5rem",
@@ -17,6 +19,8 @@ export const styles = {
       height: "200px",
     },
     "@container cardContainer (min-width: calc(1024px - 2rem))": {
+      border: "0",
+      borderRadius: "0",
       h: "640px",
     },
   }),
@@ -38,7 +42,9 @@ export const styles = {
       "& h3": { fontSize: "1.375rem" },
     },
     "@container cardContainer (min-width: calc(1024px - 2rem))": {
-      borderRadius: "8px",
+      border: "1px solid",
+      borderColor: "border.subtle",
+      borderRadius: "16px",
       display: "block",
       overflow: "hidden",
       "& h2": { fontSize: "4rem" },
