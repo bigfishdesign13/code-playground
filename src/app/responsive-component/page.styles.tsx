@@ -1,9 +1,6 @@
 import { css } from "../../../styled-system/css";
 
-const globalAreaStyles = {
-  bg: "surface.primary/80",
-  p: "1rem",
-};
+const globalAreaStyles = {};
 
 const styles = {
   gridWithSizebarStyles: css({
@@ -26,7 +23,9 @@ const styles = {
     ...globalAreaStyles,
   }),
   sidebarStyles: css({
+    bg: "surface.primary/80",
     gridArea: "sidebar",
+    p: "1rem",
     ...globalAreaStyles,
   }),
   mainStyles: css({

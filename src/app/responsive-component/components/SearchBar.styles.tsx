@@ -93,14 +93,14 @@ export const styles = {
     display: "grid",
     gap: ".5rem",
     gridTemplateColumns: "1fr",
-    "@container searchBarContainer (min-width: calc(480px - 4rem))": {
+    "@container searchBarContainer (min-width: calc(480px - 2rem))": {
       gap: "0",
       gridTemplateColumns: "1fr 1fr",
     },
-    "@container searchBarContainer (min-width: calc(768px - 6rem))": {
+    "@container searchBarContainer (min-width: calc(768px - 4rem))": {
       gridTemplateColumns: "1fr 2fr",
     },
-    "@container searchBarContainer (min-width: calc(1024px - 4rem))": {
+    "@container searchBarContainer (min-width: calc(1024px - 2rem))": {
       gridTemplateColumns: "1fr 3fr",
     },
   }),
