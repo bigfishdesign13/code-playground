@@ -1,39 +1,51 @@
 import { css } from "../../styled-system/css";
 
+const globalStyles = {
+  fontWeight: "700",
+  letterSpacing: "-1px",
+  lineHeight: "1.2",
+};
+
 export const styles = {
   display1: css({
-    fontSize: "10rem",
+    fontSize: { base: "9rem", md: "10rem" },
+    ...globalStyles,
   }),
   display2: css({
-    fontSize: "9rem",
+    fontSize: { base: "8rem", md: "9rem" },
+    ...globalStyles,
   }),
   heading1: css({
-    fontSize: "8rem",
-    lineHeight: "1.3",
+    fontSize: { base: "7rem", md: "8rem" },
+    ...globalStyles,
   }),
   heading2: css({
-    lineHeight: "1.3",
+    fontSize: { base: "6rem", md: "7rem" },
+    ...globalStyles,
   }),
   heading3: css({
-    fontSize: "6rem",
-    lineHeight: "1.3",
+    fontSize: { base: "5rem", md: "6rem" },
+    ...globalStyles,
   }),
   heading4: css({
-    fontSize: "4rem",
-    lineHeight: "1.3",
+    fontSize: { base: "3rem", md: "4rem" },
+    ...globalStyles,
   }),
   heading5: css({
-    fontSize: "2rem",
-    lineHeight: "1.3",
+    fontSize: { base: "1.75rem", md: "2rem" },
+    ...globalStyles,
   }),
   heading6: css({
     fontSize: "1rem",
+    ...globalStyles,
   }),
   subheading1: css({
-    fontSize: "1.5rem",
+    fontSize: { base: "1.25rem", md: "1.5rem" },
+    fontWeight: "500",
   }),
   subheading2: css({
-    fontSize: "1.375rem",
+    fontSize: { base: "1.125rem", md: "1.375rem" },
+    fontWeight: "500",
   }),
 };
 
