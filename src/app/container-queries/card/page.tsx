@@ -21,7 +21,9 @@ export default function Home() {
           })}
         >
           <header className={css({ mb: "2rem" })}>
-            <Heading size="heading4">Responsive component</Heading>
+            <Heading size="heading3" className={css({ mb: "1rem" })}>
+              Responsive component
+            </Heading>
             <Heading
               level="h3"
               size="subheading1"
