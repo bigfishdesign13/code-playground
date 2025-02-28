@@ -1,12 +1,9 @@
 import React from "react";
 import Heading from "./Heading";
-// import Image from "next/image";
+import Link from "next/link";
 import styles from "./ListCard.styles";
 
-export const categoryArray = [
-  "Container queries",
-  "Images"
-] as const;
+export const categoryArray = ["Container queries", "Images"] as const;
 export type Category = (typeof categoryArray)[number];
 
 export interface ListCardProps {
@@ -31,12 +28,13 @@ export interface ListCardProps {
 }
 
 const ListCard = (props: ListCardProps) => {
-  const { ariaLabel, category, className, id, slug, summary, title, ...rest } = props;
+  const { ariaLabel, category, className, id, slug, summary, title, ...rest } =
+    props;
   const finalHref = `${slug}`;
   const finalAriaLabel = ariaLabel ? ariaLabel : title;
 
   return (
-    <a
+    <Link
       aria-label={finalAriaLabel}
       className={`${className} ${styles.wrapper}`}
       href={finalHref}
@@ -51,7 +49,6 @@ const ListCard = (props: ListCardProps) => {
         src={thumbnail}
         width={480}
       /> */}
-      {/* <h3>{title}</h3> */}
       <div className={styles.text}>
         <p className={styles.category}>{category}</p>
         <Heading
@@ -64,7 +61,7 @@ const ListCard = (props: ListCardProps) => {
         </Heading>
         <p className={styles.summary}>{summary}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 export default ListCard;
