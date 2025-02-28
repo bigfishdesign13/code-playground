@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Irish_Grover, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
+import HomeLink from "@/components/HomeLink";
 
 const irishGrover = Irish_Grover({
   weight: ["400"],
@@ -34,6 +35,9 @@ export default function RootLayout({
     <html className={`${irishGrover.variable} ${barlow.variable}`} lang="en">
       <body>
         {/* <body className={css({ background: "light.surface.page" })}> */}
+        <nav>
+          <HomeLink />
+        </nav>
         {children}
       </body>
     </html>

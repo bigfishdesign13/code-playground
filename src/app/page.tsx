@@ -12,7 +12,7 @@ export default function Home() {
           alignItems: "center",
         })}
       >
-        <div className={css({ my: "2rem", px: "2rem", width: "100%" })}>
+        <div className={css({ mt: "1rem", mb: "2rem", px: "2rem", width: "100%" })}>
           <h1>Code Playground</h1>
         </div>
         <div
