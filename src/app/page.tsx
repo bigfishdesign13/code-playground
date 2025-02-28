@@ -25,13 +25,15 @@ export default function Home() {
           })}
         >
           <ListCard
-            slug="responsive-grid"
+            slug="container-queries/searchbar"
             summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            title="Responsive grid"
+            title="Container queries: SearchBar"
           />
-          <ListCard slug="marty" summary="Summary" title="Title" />
-          <ListCard slug="marty" summary="Summary" title="Title" />
-          <ListCard slug="marty" summary="Summary" title="Title" />
+          <ListCard
+            slug="container-queries/card"
+            summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
+            title="Container queries: Card"
+          />
         </div>
       </div>
     </>

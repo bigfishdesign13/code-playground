@@ -86,6 +86,14 @@ const Heading = (props: HeadingProps) => {
       finalSize = styles.heading6;
       break;
     }
+    case "subheading1": {
+      finalSize = styles.subheading1;
+      break;
+    }
+    case "subheading2": {
+      finalSize = styles.subheading2;
+      break;
+    }
     default: {
       finalSize = styles.heading2;
       break;
