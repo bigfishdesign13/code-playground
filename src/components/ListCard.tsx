@@ -1,13 +1,20 @@
 import React from "react";
 import Heading from "./Heading";
 // import Image from "next/image";
-
 import styles from "./ListCard.styles";
+
+export const categoryArray = [
+  "Container queries",
+  "Images"
+] as const;
+export type Category = (typeof categoryArray)[number];
 
 export interface ListCardProps {
   /** String that adds an aria-label or appends to an existing aria-label for
    * screen readers.*/
   ariaLabel?: string;
+  /** The example category. */
+  category: Category;
   /** Optional string to add a CSS class to component's main wrapper. */
   className?: string;
   /** Optional string to add am ID that other components can cross reference for
@@ -24,7 +31,7 @@ export interface ListCardProps {
 }
 
 const ListCard = (props: ListCardProps) => {
-  const { ariaLabel, className, id, slug, summary, title, ...rest } = props;
+  const { ariaLabel, category, className, id, slug, summary, title, ...rest } = props;
   const finalHref = `${slug}`;
   const finalAriaLabel = ariaLabel ? ariaLabel : title;
 
@@ -46,6 +53,7 @@ const ListCard = (props: ListCardProps) => {
       /> */}
       {/* <h3>{title}</h3> */}
       <div className={styles.text}>
+        <p className={styles.category}>{category}</p>
         <Heading
           className={styles.heading}
           fontFamily="alt"

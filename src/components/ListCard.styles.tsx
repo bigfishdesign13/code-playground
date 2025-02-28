@@ -9,6 +9,11 @@ const detailStyles = {
 };
 
 export const styles = {
+  category: css({
+    fontSize: ".875rem",
+    fontWeight: "700",
+    textTransform: "uppercase",
+  }),
   heading: css({ mb: ".5rem" }),
   image: css({
     w: "full",

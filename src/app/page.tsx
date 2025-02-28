@@ -25,14 +25,16 @@ export default function Home() {
           })}
         >
           <ListCard
+            category="Container queries"
             slug="container-queries/searchbar"
-            summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            title="Container queries: SearchBar"
+            summary="Using container queries to align sizing with an underlying grid."
+            title="Search bar example"
           />
           <ListCard
+            category="Container queries"
             slug="container-queries/card"
-            summary="Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."
-            title="Container queries: Card"
+            summary="Using container queries to align sizing with an underlying grid."
+            title="Card example"
           />
         </div>
       </div>
