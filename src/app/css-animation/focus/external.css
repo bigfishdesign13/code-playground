@@ -30,7 +30,7 @@
   box-sizing: border-box;
 }
 body {
-  align-items: center;
+  /* align-items: center;
   background-color: var(--background);
   color: var(--foreground);
   display: flex;
@@ -41,36 +41,36 @@ body {
   gap: 8px;
   height: 100vh;
   justify-content: center;
-  margin: 0;
+  margin: 0; */
 }
 a {
-  color: var(--color-blue-primary);
+  /* color: var(--color-blue-primary); */
 }
 a:hover {
-  color: var(--color-blue-secondary);
+  /* color: var(--color-blue-secondary); */
 }
 button {
-  background-color: var(--color-blue-primary);
+  /* background-color: var(--color-blue-primary);
   border: 0;
   color: var(--color-button-text);
   font-size: var(--font-size-default);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem; */
 }
 button:hover {
-  background-color: var(--color-blue-secondary);
+  /* background-color: var(--color-blue-secondary); */
 }
 h1 {
-  font-size: 3rem;
+  /* font-size: 3rem;
   font-weight: 500;
   margin: 0 0 1rem;
-  width: fit-content;
+  width: fit-content; */
 }
 h2 {
-  font-size: 2rem;
+  /* font-size: 2rem;
   font-weight: 500;
   margin: 0 0 1rem;
   color: #333;
-  width: fit-content;
+  width: fit-content; */
 }
 @keyframes focus {
   0% {
@@ -303,27 +303,18 @@ h2 {
   width: fit-content;
 }
 #menu {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   padding: 2rem;
   width: 200px;
   height: 100vh;
   position: fixed;
   top: 0;
-  /* left: calc(100vw - 100px); */
   background: silver;
-  /* animation-duration: 500ms;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-in-out;
-        animation-direction: reverse;
-        animation-play-state: running; */
-
-  /* left: calc(100vw - 100px); */
   left: 100vw;
   width: 200px;
   transition:
     left 250ms ease-in-out,
-    width 250ms ease-in-out;
+    width 250ms ease-in-out; */
 }
 #menu.open-menu {
   /* animation-name: open-menu;

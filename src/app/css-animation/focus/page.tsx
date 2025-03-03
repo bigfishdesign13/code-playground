@@ -3,7 +3,7 @@
 // import { useRef, useState } from "react";
 import { RefObject, useRef } from "react";
 import ContentWrapper from "@/components/ContentWrapper";
-// import styles from "./page.styles";
+import styles from "./page.styles";
 import Button from "@/components/Button";
 import "./external.css";
 
@@ -58,9 +58,9 @@ export default function Home() {
       <ContentWrapper pageTitle="Focus animation" subHeading="">
         <>
           <div className="box rotate" id="div1" ref={boxRef} tabIndex={0}></div>
-          <nav className="close-menu" id="menu" ref={menuRef}>
+          <nav className={`close-menu ${styles.menu}`} id="menu" ref={menuRef}>
             <h2
-              className="special-focus"
+              className={`special-focus ${styles.menuTitle}`}
               id="menu-title"
               ref={menuTitleRef}
               tabIndex={-1}

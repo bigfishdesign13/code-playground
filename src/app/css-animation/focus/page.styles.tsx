@@ -1,70 +1,33 @@
 import { css } from "../../../../styled-system/css";
-import { cq } from "../../../../styled-system/patterns";
-
-const globalAreaStyles = {};
+// import { cq } from "../../../../styled-system/patterns";
 
 const styles = {
-  gridWithSizebar: css({
-    display: "grid",
-    // gap: { base: "1rem", md: "1.5rem", xl: "2rem" },
-    gap: "2rem",
-    gridTemplateAreas: {
-      base: `"top" "sidebar" "main" "bottom"`,
-      sm: `"top top" "sidebar main" "bottom bottom"`,
-    },
-    gridTemplateColumns: {
-      base: "1fr",
-      sm: "1fr 1fr",
-      md: "1fr 2fr",
-      lg: "1fr 3fr",
-    },
-  }),
-  top: css({
-    gridArea: "top",
-    ...globalAreaStyles,
-  }),
-  sidebar: css({
-    bg: "surface.primary/80",
-    border: "1px solid",
-    borderColor: "border.subtle",
-    display: "flex",
-    flexDirection: "column",
-    gap: "2rem",
-    gridArea: "sidebar",
-    p: "1rem",
-    ...globalAreaStyles,
-  }),
-  main: css({
-    gridArea: "main",
-    display: "flex",
-    flexDirection: "column",
-    gap: "2rem",
-    ...globalAreaStyles,
-  }),
-  bottom: css({
-    gridArea: "bottom",
-    ...globalAreaStyles,
-  }),
+  menu: css({
+    background: "surface.secondary",
+    boxSizing: "border-box",
+    padding: "2rem",
+    height: "100vh",
+    position: "fixed",
+    top: "0",
+    /* left: calc(100vw - 100px); */
+    /* animation-duration: 500ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+        animation-play-state: running; */
 
-  stack: css({
-    display: "flex",
-    flexDirection: "column",
-    gap: "2rem",
+    /* left: calc(100vw - 100px); */
+    left: "100vw",
+    width: "200px",
+    transition: "left 250ms ease-in-out,width 250ms ease-in-out",
   }),
-  gridContainer: cq({ name: "gridContainer" }),
-  grid: css({
-    display: "grid",
-    gridTemplateColumns: "1fr",
-    gap: "2rem",
-    "@container gridContainer (min-width: calc(480px - 2rem))": {
-      gridTemplateColumns: "1fr 1fr",
-    },
-    "@container gridContainer (min-width: calc(768px - 4rem))": {
-      gridTemplateColumns: "1fr 1fr 1fr",
-    },
-    "@container gridContainer (min-width: calc(1024px - 2rem))": {
-      gridTemplateColumns: "1fr 1fr 1fr 1fr",
-    },
+  menuTitle: css({
+    fontSize: "2rem",
+    fontWeight: "500",
+    margin: "0 0 1rem",
+    color: "text.quiet",
+    width: "fit-content",
   }),
 };
 
