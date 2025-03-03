@@ -3,7 +3,11 @@ import Heading from "./Heading";
 import Link from "next/link";
 import styles from "./ListCard.styles";
 
-export const categoryArray = ["Container queries", "Images"] as const;
+export const categoryArray = [
+  "Container queries",
+  "CSS animation",
+  "Images",
+] as const;
 export type Category = (typeof categoryArray)[number];
 
 export interface ListCardProps {
