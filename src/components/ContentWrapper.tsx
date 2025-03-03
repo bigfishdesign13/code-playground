@@ -4,7 +4,7 @@ import styles from "./ContentWrapper.styles";
 
 export interface ContentWrapperProps {
   /** The page content. */
-  children: string | JSX.Element;
+  children: JSX.Element;
   /** Main page heading */
   pageTitle: string;
   /** Subheading (brief description) */

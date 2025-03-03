@@ -22,6 +22,7 @@ export const styles = {
     right: "1rem",
     top: "1rem",
     width: "4rem",
+    zIndex: "100",
   }),
 };
 

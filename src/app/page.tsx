@@ -12,7 +12,7 @@ export default function Home() {
           alignItems: "center",
         })}
       >
-        <div className={css({ mt: "1rem", mb: "2rem", px: "2rem", width: "100%" })}>
+        <div className={css({ my: "2rem", px: "2rem", width: "100%" })}>
           <h1>Code Playground</h1>
         </div>
         <div
@@ -35,6 +35,12 @@ export default function Home() {
             slug="container-queries/card"
             summary="Using container queries to align sizing with an underlying grid."
             title="Card example"
+          />
+          <ListCard
+            category="CSS animation"
+            slug="css-animation/focus"
+            summary="Experimenting with an animated and transitional focus indicator."
+            title="Focus animation"
           />
         </div>
       </div>
