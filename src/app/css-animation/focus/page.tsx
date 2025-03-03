@@ -1,7 +1,7 @@
 "use client";
 
 // import { useRef, useState } from "react";
-import { useRef } from "react";
+import { RefObject, useRef } from "react";
 import ContentWrapper from "@/components/ContentWrapper";
 // import styles from "./page.styles";
 import Button from "@/components/Button";
@@ -9,27 +9,27 @@ import "./external.css";
 
 export default function Home() {
   // const [isActive, setIsActive] = useState(false);
-  const pageTitleRef = useRef<HTMLDivElement | null>(null);
-  const menuTitleRef = useRef<HTMLDivElement | null>(null);
-  const boxRef = useRef<HTMLDivElement | null>(null);
-  const menuRef = useRef<HTMLDivElement | null>(null);
+  const pageTitleRef = useRef<HTMLDivElement>(null);
+  const menuTitleRef = useRef<HTMLDivElement>(null!);
+  const boxRef = useRef<HTMLDivElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const onClickHandler = () => {
     // pageTitleRef.current?.focus();
-    setHeadingFocus({ heading: menuTitleRef, delay: 400 });
+    setHeadingFocus({ headingRef: menuTitleRef, delay: 400 });
     boxRef.current?.classList.toggle("rotate");
     menuRef.current?.classList.add("open-menu");
     menuRef.current?.classList.toggle("close-menu");
     console.log("click");
   };
 
-  interface SetHeadingProps {
-    heading: HTMLDivElement;
+  interface SetHeadingFocusProps {
+    headingRef: RefObject<HTMLHeadingElement>;
     delay: number;
   }
-  const setHeadingFocus = (props: SetHeadingProps) => {
-    const { heading, delay = 0 } = props;
+  const setHeadingFocus = (props: SetHeadingFocusProps) => {
+    const { headingRef, delay = 0 } = props;
     setTimeout(() => {
-      heading.current?.focus();
+      headingRef.current?.focus();
     }, delay);
   };
 
@@ -57,12 +57,7 @@ export default function Home() {
     <>
       <ContentWrapper pageTitle="Focus animation" subHeading="">
         <>
-          <div
-            className="box rotate"
-            id="div1"
-            ref={boxRef}
-            tabIndex={0}
-          ></div>
+          <div className="box rotate" id="div1" ref={boxRef} tabIndex={0}></div>
           <nav className="close-menu" id="menu" ref={menuRef}>
             <h2
               className="special-focus"
