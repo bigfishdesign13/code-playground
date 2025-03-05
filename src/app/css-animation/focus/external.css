@@ -4,9 +4,12 @@
 
   --color-blue-primary: #2973d4;
   --color-blue-primary-0: rgba(65, 129, 241, 0);
+  --color-blue-primary-20: rgba(65, 129, 241, 0.2);
   --color-blue-primary-40: rgba(65, 129, 241, 0.4);
+  --color-blue-primary-60: rgba(65, 129, 241, 0.6);
   --color-blue-primary-80: rgba(65, 129, 241, 0.8);
   --color-blue-primary-100: rgba(65, 129, 241, 1);
+  --color-blue-primary-bright: rgb(125, 173, 255);
   --color-blue-secondary: #0047a5;
   --surface-parimary: #efefef;
   --color-button-text: var(--background);
@@ -28,49 +31,6 @@
 }
 * {
   box-sizing: border-box;
-}
-body {
-  /* align-items: center;
-  background-color: var(--background);
-  color: var(--foreground);
-  display: flex;
-  flex-direction: column;
-  font-family: system-ui, sans-serif;
-  font-size: var(--font-size-default);
-  line-height: 1.5;
-  gap: 8px;
-  height: 100vh;
-  justify-content: center;
-  margin: 0; */
-}
-a {
-  /* color: var(--color-blue-primary); */
-}
-a:hover {
-  /* color: var(--color-blue-secondary); */
-}
-button {
-  /* background-color: var(--color-blue-primary);
-  border: 0;
-  color: var(--color-button-text);
-  font-size: var(--font-size-default);
-  padding: 0.5rem 1rem; */
-}
-button:hover {
-  /* background-color: var(--color-blue-secondary); */
-}
-h1 {
-  /* font-size: 3rem;
-  font-weight: 500;
-  margin: 0 0 1rem;
-  width: fit-content; */
-}
-h2 {
-  /* font-size: 2rem;
-  font-weight: 500;
-  margin: 0 0 1rem;
-  color: #333;
-  width: fit-content; */
 }
 @keyframes focus {
   0% {
@@ -139,6 +99,84 @@ h2 {
   100% {
     border-radius: 0;
     outline: 0 solid;
+    outline-color: var(--color-blue-primary-0);
+  }
+}
+@keyframes focus-pulse {
+  /* 0% {
+    outline: 0;
+    outline-color: var(--color-blue-primary-60);
+    outline-offset: 2px;
+  } */
+  1% {
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary-0);
+    outline-offset: 12px;
+  }
+  5% {
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary-80);
+    outline-offset: 2px;
+  }
+  40% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary-80);
+    outline-offset: 2px;
+    animation-timing-function: ease-out;
+  }
+  41% {
+    border-radius: 2px;
+    outline: 4px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 4px;
+    animation-timing-function: ease-in;
+  }
+  49% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary-60);
+    outline-offset: 2px;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    border-radius: 2px;
+    outline: 6px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 4px;
+    animation-timing-function: ease-in;
+  }
+  58% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary-60);
+    outline-offset: 2px;
+    animation-timing-function: ease-out;
+  }
+  59% {
+    border-radius: 2px;
+    outline: 8px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 4px;
+    animation-timing-function: ease-in;
+  }
+  67% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 2px;
+    animation-timing-function: ease-in;
+  }
+  95% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 2px;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    border-radius: 0;
+    outline: 0;
     outline-color: var(--color-blue-primary-0);
   }
 }
@@ -279,7 +317,7 @@ h2 {
 *:focus {
   box-shadow: none;
   outline: 2px solid;
-  outline-offset: 2px;
+  outline-offset: 4px;
   outline-color: rgba(65, 129, 241, 1);
   z-index: 9999;
 }
@@ -293,28 +331,18 @@ h2 {
   animation-duration: 3000ms;
   animation-timing-function: ease-out;
 }
-#container {
-  background: var(--surface-parimary);
-  max-width: 800px;
-  padding: 2rem;
-  width: 100%;
+.transient-focus:focus {
+  outline: 0 solid;
+  /* outline-color: rgba(65, 129, 241, 1); */
+  outline-color: var(--color-blue-primary-40);
+  outline-offset: 12px;
+  z-index: 9999;
+  animation-name: focus-pulse;
+  animation-duration: 5000ms;
+  animation-timing-function: ease-out;
 }
 #page-title {
   width: fit-content;
-}
-#menu {
-  /* box-sizing: border-box;
-  padding: 2rem;
-  width: 200px;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  background: silver;
-  left: 100vw;
-  width: 200px;
-  transition:
-    left 250ms ease-in-out,
-    width 250ms ease-in-out; */
 }
 #menu.open-menu {
   /* animation-name: open-menu;

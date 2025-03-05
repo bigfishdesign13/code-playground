@@ -9,16 +9,22 @@ import "./external.css";
 
 export default function Home() {
   // const [isActive, setIsActive] = useState(false);
-  const pageTitleRef = useRef<HTMLDivElement>(null);
+  const pageTitleRef = useRef<HTMLDivElement>(null!);
   const menuTitleRef = useRef<HTMLDivElement>(null!);
   const boxRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
-  const onClickHandler = () => {
+  const onClickMenu = () => {
     // pageTitleRef.current?.focus();
     setHeadingFocus({ headingRef: menuTitleRef, delay: 400 });
     boxRef.current?.classList.toggle("rotate");
     menuRef.current?.classList.add("open-menu");
     menuRef.current?.classList.toggle("close-menu");
+    console.log("click");
+  };
+  const onClickSubmit = () => {
+    // pageTitleRef.current?.focus();
+    setHeadingFocus({ headingRef: pageTitleRef, delay: 0 });
+    boxRef.current?.classList.toggle("rotate");
     console.log("click");
   };
 
@@ -68,15 +74,16 @@ export default function Home() {
               Menu Items
             </h2>
           </nav>
-          <div id="container">
+          <div id="container" className={styles.container}>
             <h1
-              className="special-focus"
+              className={`transient-focus ${styles.pageTitle}`}
               id="page-title"
               ref={pageTitleRef}
               tabIndex={-1}
             >
               Page title
             </h1>
+            <p>Use the buttons below to show transient focus indicators.</p>
             <p>
               Integer posuere erat a ante venenatis dapibus posuere velit
               aliquet. Praesent commodo <a href="#">cursus magna</a>, vel
@@ -98,14 +105,27 @@ export default function Home() {
               posuere velit aliquet. Etiam porta sem malesuada magna mollis
               euismod.
             </p>
-            <Button id="btn" onClick={onClickHandler}>
-              Submit
-            </Button>
+            <div className={styles.buttonGroup}>
+              <Button
+                className={styles.buttonPrimary}
+                id="btn-1"
+                onClick={onClickMenu}
+              >
+                Menu title
+              </Button>
+              <Button
+                className={styles.buttonSecondary}
+                id="btn-2"
+                onClick={onClickSubmit}
+              >
+                Page title
+              </Button>
+            </div>
           </div>
 
-          <div className="speckle speckle1"></div>
+          {/* <div className="speckle speckle1"></div>
           <div className="speckle speckle2"></div>
-          <div className="speckle speckle3"></div>
+          <div className="speckle speckle3"></div> */}
         </>
       </ContentWrapper>
     </>
