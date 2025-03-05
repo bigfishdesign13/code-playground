@@ -118,61 +118,75 @@
     outline-color: var(--color-blue-primary-80);
     outline-offset: 2px;
   }
-  40% {
+  30% {
     border-radius: 0;
     outline: 2px solid;
     outline-color: var(--color-blue-primary-80);
     outline-offset: 2px;
-    animation-timing-function: ease-out;
+    /* animation-timing-function: ease-in; */
   }
-  41% {
-    border-radius: 2px;
-    outline: 4px solid;
-    outline-color: var(--color-blue-primary);
-    outline-offset: 4px;
-    animation-timing-function: ease-in;
-  }
-  49% {
-    border-radius: 0;
-    outline: 2px solid;
-    outline-color: var(--color-blue-primary-60);
-    outline-offset: 2px;
-    animation-timing-function: ease-out;
-  }
-  50% {
-    border-radius: 2px;
-    outline: 6px solid;
-    outline-color: var(--color-blue-primary);
-    outline-offset: 4px;
-    animation-timing-function: ease-in;
-  }
-  58% {
-    border-radius: 0;
-    outline: 2px solid;
-    outline-color: var(--color-blue-primary-60);
-    outline-offset: 2px;
-    animation-timing-function: ease-out;
-  }
-  59% {
+  31% {
     border-radius: 2px;
     outline: 8px solid;
     outline-color: var(--color-blue-primary);
-    outline-offset: 4px;
-    animation-timing-function: ease-in;
+    /* outline-offset: 4px; */
+    /* animation-timing-function: ease-in; */
   }
-  67% {
+  35% {
     border-radius: 0;
     outline: 2px solid;
     outline-color: var(--color-blue-primary);
     outline-offset: 2px;
-    animation-timing-function: ease-in;
+    /* animation-timing-function: ease-out; */
+  }
+  40% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 2px;
+    /* animation-timing-function: ease-out; */
+  }
+  41% {
+    border-radius: 2px;
+    outline: 8px solid;
+    outline-color: var(--color-blue-primary);
+    /* outline-offset: 4px; */
+    /* animation-timing-function: ease-in; */
+  }
+  45% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 2px;
+    /* animation-timing-function: ease-out; */
+  }
+  50% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 2px;
+    /* animation-timing-function: ease-out; */
+  }
+  51% {
+    border-radius: 2px;
+    outline: 8px solid;
+    outline-color: var(--color-blue-primary);
+    /* outline-offset: 4px; */
+    /* animation-timing-function: ease-in; */
+  }
+  55% {
+    border-radius: 0;
+    outline: 2px solid;
+    outline-color: var(--color-blue-primary);
+    outline-offset: 2px;
+    /* animation-timing-function: ease-in; */
   }
   95% {
     border-radius: 0;
     outline: 2px solid;
     outline-color: var(--color-blue-primary);
     outline-offset: 2px;
-    animation-timing-function: ease-in;
+    /* animation-timing-function: ease-in; */
   }
   100% {
     border-radius: 0;
@@ -338,8 +352,8 @@
   outline-offset: 12px;
   z-index: 9999;
   animation-name: focus-pulse;
-  animation-duration: 5000ms;
-  animation-timing-function: ease-out;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
 }
 #page-title {
   width: fit-content;

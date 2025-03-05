@@ -68,11 +68,13 @@ const styles = {
   }),
   buttonSecondary: css({
     ...buttonBaseStyles,
-    bgColor: "transparent",
+    bgColor: "formElement/5",
     border: "1px solid",
     borderColor: "formElement",
+    color: "formElement",
     _hover: {
-      bgColor: "formElement/20",
+      bgColor: "formElement/15",
+      color: "formElement.loud",
     },
   }),
 };
