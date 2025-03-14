@@ -6,6 +6,7 @@ import styles from "./ListCard.styles";
 export const categoryArray = [
   "Container queries",
   "CSS animation",
+  "General CSS",
   "Images",
 ] as const;
 export type Category = (typeof categoryArray)[number];

@@ -42,6 +42,12 @@ export default function Home() {
             summary="Experimenting with an animated and transitional focus indicator."
             title="Focus animation"
           />
+          <ListCard
+            category="General CSS"
+            slug="css-general/position-sticky"
+            summary="Creating a compliant sidebar."
+            title="Position sticky"
+          />
         </div>
       </div>
     </>

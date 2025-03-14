@@ -1,9 +1,9 @@
-import { css } from "../../styled-system/css";
-import { cq } from "../../styled-system/patterns";
+import { css } from "../../../../styled-system/css";
+import { cq } from "../../../../styled-system/patterns";
 
 const globalAreaStyles = {};
 
-export const styles = {
+const styles = {
   gridWithSizebar: css({
     display: "grid",
     // gap: { base: "1rem", md: "1.5rem", xl: "2rem" },
@@ -32,11 +32,6 @@ export const styles = {
     gap: "2rem",
     gridArea: "sidebar",
     p: "1rem",
-    position: "sticky",
-    top: "0",
-    h: "100%",
-    maxHeight: "100vh",
-    overflow: "auto",
     ...globalAreaStyles,
   }),
   main: css({
