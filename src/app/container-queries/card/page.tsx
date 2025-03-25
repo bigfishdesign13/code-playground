@@ -1,6 +1,7 @@
 import ContentWrapper from "@/components/ContentWrapper";
 // import styles from "./page.styles";
 import Card from "../components/Card";
+import CardGrid from "@/components/CardGrid";
 import GridWithSidebar from "@/components/GridWithSidebar";
 
 export default function Home() {
@@ -22,6 +23,11 @@ export default function Home() {
             <Card />
             <Card />
             <Card />
+            <CardGrid>
+              <Card />
+              <Card />
+              <Card />
+            </CardGrid>
           </>
         }
         bottom={<Card />}
