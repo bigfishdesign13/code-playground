@@ -13,14 +13,15 @@ export const styles = {
       sm: `"top top" "sidebar main" "bottom bottom"`,
     },
     gridTemplateColumns: {
-      base: "1fr",
-      sm: "1fr 1fr",
-      md: "1fr 2fr",
-      lg: "1fr 3fr",
+      base: "repeat(12, 1fr)",
+      // sm: "1fr 1fr",
+      // md: "1fr 2fr",
+      // lg: "1fr 3fr",
     },
   }),
   top: css({
     gridArea: "top",
+    gridColumn: "1 / -1",
     ...globalAreaStyles,
   }),
   sidebar: css({
@@ -31,6 +32,7 @@ export const styles = {
     flexDirection: "column",
     gap: "2rem",
     gridArea: "sidebar",
+    gridColumn: { base: "1 / -1", sm: "1 / 7", md: "1 / 5", lg: "1 / 4" },
     p: "1rem",
     // position: "sticky",
     // top: "0",
@@ -40,14 +42,16 @@ export const styles = {
     ...globalAreaStyles,
   }),
   main: css({
-    gridArea: "main",
     display: "flex",
     flexDirection: "column",
     gap: "2rem",
+    gridArea: "main",
+    gridColumn: { base: "1 / -1", sm: "7 / 13", md: "5 / 13", lg: "4 / 13" },
     ...globalAreaStyles,
   }),
   bottom: css({
     gridArea: "bottom",
+    gridColumn: "1 / -1",
     ...globalAreaStyles,
   }),
 

@@ -8,13 +8,13 @@ export const styles = {
     gap: "2rem",
     gridTemplateColumns: "1fr",
     "@container cardGridContainer (min-width: calc(480px - 2rem))": {
-      gridTemplateColumns: "repeat(2, 1fr)",
+      gridTemplateColumns: "repeat(2, 6fr)",
     },
     "@container cardGridContainer (min-width: calc(768px - 4rem))": {
-      gridTemplateColumns: "repeat(3, 1fr)",
+      gridTemplateColumns: "repeat(3, 4fr)",
     },
     "@container cardGridContainer (min-width: calc(1024px - 2rem))": {
-      gridTemplateColumns: "repeat(4, 1fr)",
+      gridTemplateColumns: "repeat(4, 3fr)",
     },
   }),
 };
