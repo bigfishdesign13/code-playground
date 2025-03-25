@@ -13,15 +13,18 @@ export const styles = {
     w: "100%",
     "@container cardContainer (min-width: calc(480px - 2rem))": {
       h: "300px",
+      mb: ".5rem",
     },
     "@container cardContainer (min-width: calc(768px - 4rem))": {
       borderRadius: "8px",
       height: "200px",
+      mb: "0",
     },
     "@container cardContainer (min-width: calc(1024px - 2rem))": {
       border: "0",
       borderRadius: "0",
       h: "640px",
+      mb: "0",
     },
   }),
   component: css({
