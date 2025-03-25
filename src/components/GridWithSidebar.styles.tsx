@@ -33,10 +33,11 @@ export const styles = {
     gridArea: "sidebar",
     p: "1rem",
     position: "sticky",
-    top: "0",
+    top: "16px",
     h: "100%",
     maxHeight: "100vh",
     overflow: "auto",
+    zIndex: "2",
     ...globalAreaStyles,
   }),
   main: css({
