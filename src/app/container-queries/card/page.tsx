@@ -1,8 +1,8 @@
 import ContentWrapper from "@/components/ContentWrapper";
-// import styles from "./page.styles";
 import Card from "../components/Card";
 import CardGrid from "@/components/CardGrid";
 import GridWithSidebar from "@/components/GridWithSidebar";
+import Heading from "@/components/Heading";
 
 export default function Home() {
   return (
@@ -20,9 +20,15 @@ export default function Home() {
         }
         main={
           <>
+            <Heading level="h3" size="heading5">
+              Cards in a stack
+            </Heading>
             <Card />
             <Card />
             <Card />
+            <Heading level="h3" size="heading5">
+              Cards in a grid
+            </Heading>
             <CardGrid>
               <Card />
               <Card />
