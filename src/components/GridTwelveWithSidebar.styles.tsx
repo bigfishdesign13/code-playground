@@ -12,12 +12,7 @@ export const styles = {
       base: `"top" "sidebar" "main" "bottom"`,
       sm: `"top top" "sidebar main" "bottom bottom"`,
     },
-    gridTemplateColumns: {
-      base: "repeat(12, 1fr)",
-      // sm: "1fr 1fr",
-      // md: "1fr 2fr",
-      // lg: "1fr 3fr",
-    },
+    gridTemplateColumns: "repeat(12, 1fr)",
   }),
   top: css({
     gridArea: "top",
@@ -34,8 +29,6 @@ export const styles = {
     gridArea: "sidebar",
     gridColumn: { base: "1 / -1", sm: "1 / 7", md: "1 / 5", lg: "1 / 4" },
     p: "1rem",
-    // position: "sticky",
-    // top: "0",
     h: "100%",
     maxHeight: "100vh",
     overflow: "auto",
