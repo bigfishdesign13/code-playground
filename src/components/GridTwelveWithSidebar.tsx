@@ -5,10 +5,10 @@ import styles from "./GridTwelveWithSidebar.styles";
 
 export interface GridWithSidebarProps {
   /** The page content. */
-  top: JSX.Element;
+  top?: JSX.Element;
   sidebar: JSX.Element;
   main: JSX.Element;
-  bottom: JSX.Element;
+  bottom?: JSX.Element;
 }
 
 const GridWithSidebar = (props: GridWithSidebarProps) => {

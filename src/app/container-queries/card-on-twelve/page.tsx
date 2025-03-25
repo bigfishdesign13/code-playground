@@ -39,7 +39,7 @@ export default function Home() {
               </CardGrid>
             </>
           }
-          bottom={<Card />}
+          // bottom={<Card />}
         />
         <div className={css({ mt: "2rem" })}>
           <CardGrid>
