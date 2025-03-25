@@ -25,6 +25,12 @@ export default function Home() {
           })}
         >
           <ListCard
+            category="Grids"
+            slug="grids/hero"
+            summary="Using a 12-column grid to handle the layout of a hero component."
+            title="Hero and grid"
+          />
+          <ListCard
             category="Container queries"
             slug="container-queries/searchbar"
             summary="Using container queries to align sizing with an underlying grid."

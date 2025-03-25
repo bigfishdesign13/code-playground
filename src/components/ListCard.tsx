@@ -7,6 +7,7 @@ export const categoryArray = [
   "Container queries",
   "CSS animation",
   "General CSS",
+  "Grids",
   "Images",
 ] as const;
 export type Category = (typeof categoryArray)[number];
