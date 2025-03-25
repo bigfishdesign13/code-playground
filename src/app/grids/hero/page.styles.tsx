@@ -9,7 +9,6 @@ const styles = {
     marginRight: "-50vw",
     maxWidth: "100vw",
     width: "100vw",
-    bg: "red",
   }),
   wrapper: css({
     backgroundImage: "url(/books.png)",

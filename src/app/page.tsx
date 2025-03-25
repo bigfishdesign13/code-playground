@@ -43,6 +43,12 @@ export default function Home() {
             title="Card example"
           />
           <ListCard
+            category="Container queries"
+            slug="container-queries/card-on-twelve"
+            summary="Using container queries to align sizing with a true 12-column grid."
+            title="Card on true 12-column grid"
+          />
+          <ListCard
             category="CSS animation"
             slug="css-animation/focus"
             summary="Experimenting with an animated and transitional focus indicator."
