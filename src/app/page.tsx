@@ -26,6 +26,12 @@ export default function Home() {
         >
           <ListCard
             category="Grids"
+            slug="grids/subgrid"
+            summary="Working through the specs of grid & subgrid."
+            title="Learning subgrid"
+          />
+          <ListCard
+            category="Grids"
             slug="grids/hero"
             summary="Using a 12-column grid to handle the layout of a hero component."
             title="Hero and grid"
