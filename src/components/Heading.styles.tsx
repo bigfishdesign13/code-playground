@@ -43,7 +43,7 @@ export const styles = {
     lineHeight: "1.15",
   }),
   heading6: css({
-    fontSize: "1rem",
+    fontSize: { base: "1rem", md: "1.5rem" },
     ...globalStyles,
     lineHeight: "1.25",
   }),

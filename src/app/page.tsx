@@ -25,6 +25,12 @@ export default function Home() {
           })}
         >
           <ListCard
+            category="Images"
+            slug="next-image/props"
+            summary="A custom image component that utilizes the Next.js Image component at its core."
+            title="Examples using Next.js Image component"
+          />
+          <ListCard
             category="Grids"
             slug="grids/hero"
             summary="Using a 12-column grid to handle the layout of a hero component."
