@@ -56,7 +56,7 @@ export default function Home() {
           </div>
           <div>
             <Heading level="h3" size="heading6">
-              2:1 (50%)
+              1:2 (200%)
             </Heading>
             <CustomImage
               alt="My image"
