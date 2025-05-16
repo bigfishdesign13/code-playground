@@ -78,9 +78,11 @@ const primatives = {
 
 const globalCss = defineGlobalStyles({
   "html, body": {
+    backgroundAttachment: "fixed",
     backgroundColor: "surface.page",
     backgroundSize: "cover",
     backgroundImage: "url(/background.png)",
+    backgroundPosition: "top",
     backgroundRepeat: "no-repeat",
     color: "text",
     fontFamily: "var(--font-barlow)",
@@ -115,11 +117,11 @@ export default defineConfig({
   theme: {
     extend: {
       breakpoints: {
-        sm: '480px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        '2xl': '1536px'
+        sm: "480px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
       tokens: {
         colors: {
