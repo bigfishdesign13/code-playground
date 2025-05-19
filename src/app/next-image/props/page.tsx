@@ -1,7 +1,6 @@
 import ContentWrapper from "@/components/ContentWrapper";
 import Heading from "@/components/Heading";
 import CustomImage from "@/components/CustomImage";
-// import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,7 +11,7 @@ export default function Home() {
       <div
         style={{
           display: "grid",
-          gap: "2rem",
+          gap: "4rem",
           position: "relative",
         }}
       >
@@ -30,8 +29,10 @@ export default function Home() {
               1:1 (100%)
             </Heading>
             <CustomImage
-              alt="My image"
+              alt="My first image"
               aspectRatio="square"
+              quality={5}
+              sizes="(min-width: 768px) 33vw, 100vw"
               src="/westminster-bridge-and-big-ben-london-uk.jpg"
             />
           </div>
@@ -235,7 +236,7 @@ export default function Home() {
         </div>
 
         {/* Size examples */}
-        <Heading size="heading4">Size</Heading>
+        <Heading size="heading4">Custom Width</Heading>
         <div
           style={{
             display: "grid",
@@ -251,7 +252,7 @@ export default function Home() {
               alt="My image"
               aspectRatio="square"
               isCropped
-              size="sm"
+              customWidth="sm"
               src="/westminster-bridge-and-big-ben-london-uk.jpg"
             />
           </div>
@@ -263,7 +264,7 @@ export default function Home() {
               alt="My image"
               aspectRatio="square"
               isCropped
-              size="md"
+              customWidth="md"
               src="/westminster-bridge-and-big-ben-london-uk.jpg"
             />
           </div>
@@ -275,7 +276,7 @@ export default function Home() {
               alt="My image"
               aspectRatio="square"
               isCropped
-              size="lg"
+              customWidth="lg"
               src="/westminster-bridge-and-big-ben-london-uk.jpg"
             />
           </div>
@@ -287,7 +288,7 @@ export default function Home() {
               alt="My image"
               aspectRatio="square"
               isCropped
-              size="xl"
+              customWidth="xl"
               src="/westminster-bridge-and-big-ben-london-uk.jpg"
             />
           </div>
