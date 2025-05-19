@@ -36,12 +36,17 @@ export const sizeArray = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl"] as const;
 
 export type SizeType = (typeof sizeArray)[number];
 
+export const focalPointArray = ["top", "bottom", "left", "right"] as const;
+
+export type FocalPointType = (typeof focalPointArray)[number];
+
 export interface CustomImageProps {
   alt: string;
   aspectRatio?: AspectRatioType;
   backgroundColor?: CSSProperties["color"];
   border?: CSSProperties["border"];
   isCropped?: boolean;
+  cropFocalPoint?: FocalPointType;
   size?: SizeType;
   src: string;
 }
@@ -53,6 +58,7 @@ const CustomImage = (props: CustomImageProps) => {
     backgroundColor = "#000000",
     border = "1px solid #333",
     isCropped = false,
+    cropFocalPoint = undefined,
     size = "auto",
     src,
     ...rest
@@ -75,6 +81,7 @@ const CustomImage = (props: CustomImageProps) => {
           fill={true}
           style={{
             objectFit: isCropped ? "cover" : "contain",
+            objectPosition: isCropped ? cropFocalPoint : undefined,
           }}
         />
       </div>
