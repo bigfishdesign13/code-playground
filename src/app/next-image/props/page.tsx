@@ -1,6 +1,7 @@
 import ContentWrapper from "@/components/ContentWrapper";
 import Heading from "@/components/Heading";
 import CustomImage from "@/components/CustomImage";
+// import Image from "next/image";
 
 export default function Home() {
   return (
@@ -130,6 +131,107 @@ export default function Home() {
             isCropped
             src="/uk-london-big-ben-houses-of-parliament.jpg"
           />
+        </div>
+
+        {/* Cropped and position examples */}
+        <Heading size="heading4">Cropped with focal point</Heading>
+        <div
+          style={{
+            display: "grid",
+            gap: "2rem",
+            gridTemplateColumns: "repeat(4, 1fr)",
+          }}
+        >
+          <div>
+            <Heading level="h3" size="heading6">
+              Not cropped
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              src="/big-ben-houses-of-parliament.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Default focal point (center)
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              isCropped
+              src="/big-ben-houses-of-parliament.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Left focal point
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              cropFocalPoint="left"
+              isCropped
+              src="/big-ben-houses-of-parliament.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Right focal point
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              cropFocalPoint="right"
+              isCropped
+              src="/big-ben-houses-of-parliament.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Not cropped
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              src="/big-ben-tall.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Default focal point (center)
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              isCropped
+              src="/big-ben-tall.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Top focal point
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              cropFocalPoint="top"
+              isCropped
+              src="/big-ben-tall.jpg"
+            />
+          </div>
+          <div>
+            <Heading level="h3" size="heading6">
+              Bottom focal point
+            </Heading>
+            <CustomImage
+              alt="My image"
+              aspectRatio="square"
+              cropFocalPoint="bottom"
+              isCropped
+              src="/big-ben-tall.jpg"
+            />
+          </div>
         </div>
 
         {/* Size examples */}
