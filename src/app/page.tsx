@@ -25,6 +25,12 @@ export default function Home() {
           })}
         >
           <ListCard
+            category="General"
+            slug="general/link-protocols"
+            summary="Testing tel and sms link protocols"
+            title="Link protocols"
+          />
+          <ListCard
             category="Images"
             slug="next-image/props"
             summary="A custom image component that utilizes the Next.js Image component at its core."
