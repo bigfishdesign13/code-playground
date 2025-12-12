@@ -20,7 +20,11 @@ export type HeadingSizes = (typeof headingSizesArray)[number];
 export type HeadingLevels = (typeof headingLevelsArray)[number];
 export type HeadingFontFamily = (typeof headingFontFamilyArray)[number];
 
-export interface HeadingProps {
+export interface BaseProps {
+  backgroundColor?: string;
+}
+
+export interface HeadingProps extends BaseProps {
   /** Optional className that appears in addition to `heading` */
   className?: string;
   /** The heading text. */
@@ -46,6 +50,7 @@ const Heading = (props: HeadingProps) => {
     fontFamily,
     level = "h2",
     size = "",
+    // backgroundColor,
     ...rest
   } = props;
   const Tag = `${level}` as keyof JSX.IntrinsicElements;
@@ -100,11 +105,16 @@ const Heading = (props: HeadingProps) => {
     }
   }
 
+  console.log(rest);
+  const { backgroundColor } = rest;
+  console.log(rest);
+
   return (
     <Tag
       className={`${className} ${finalSize} font-${finalFontFamily}`}
       data-size={size}
       id={id}
+      style={{ backgroundColor: backgroundColor }}
       {...rest}
     >
       {children}

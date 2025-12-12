@@ -25,12 +25,6 @@ export default function Home() {
           })}
         >
           <ListCard
-            category="General"
-            slug="general/link-protocols"
-            summary="Testing tel and sms link protocols"
-            title="Link protocols"
-          />
-          <ListCard
             category="Images"
             slug="next-image/props"
             summary="A custom image component that utilizes the Next.js Image component at its core."
@@ -66,6 +60,18 @@ export default function Home() {
             summary="Experimenting with an animated and transitional focus indicator."
             title="Focus animation"
           />
+          <ListCard
+            category="General"
+            slug="general/link-protocols"
+            summary="Testing tel and sms link protocols"
+            title="Link protocols"
+          />
+          <ListCard
+            category="General"
+            slug="general/rest"
+            summary="Experimenting with the rest prop"
+            title="Rest prop"
+            />
           <ListCard
             category="General CSS"
             slug="css-general/position-sticky"
