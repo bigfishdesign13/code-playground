@@ -35,7 +35,7 @@ export default function RootLayout({
     <html className={`${irishGrover.variable} ${barlow.variable}`} lang="en">
       <body>
         {/* <body className={css({ background: "light.surface.page" })}> */}
-        <nav>
+        <nav style={{ position: "fixed", top: "0", right: "0", zIndex: "1" }}>
           <HomeLink />
         </nav>
         {children}
